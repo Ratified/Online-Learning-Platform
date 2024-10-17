@@ -1,6 +1,6 @@
-// Profile.tsx
 import React, { useEffect, useState } from 'react';
-import { getUserData, updateProfile } from '../services/authService';
+import authService from '../services/auth.service';
+const { getUserData, updateProfile } = authService;
 
 const Profile = () => {
     const [user, setUser] = useState<{ name: string; email: string } | null>(null);
@@ -8,7 +8,7 @@ const Profile = () => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const token = localStorage.getItem('token'); // Assuming you're storing the JWT in localStorage
+    const token = localStorage.getItem('token'); 
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -38,7 +38,7 @@ const Profile = () => {
             setUser(updatedUser);
             setName(updatedUser.name);
             setEmail(updatedUser.email);
-            setPassword(''); // Clear password field
+            setPassword('');
         } catch (error) {
             setMessage('Failed to update profile');
             console.error(error);

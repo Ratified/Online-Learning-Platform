@@ -63,7 +63,7 @@ const updateProfile = async (profileData: ProfileData, token: string) => {
 // Get the currently authenticated user's data
 const getUserData = async (token: string) => {
     try {
-        const response = await axiosInstance.get("auth/me", {
+        const response = await axiosInstance.get("user", { // Changed from "auth/me" to "user"
             headers: {
                 Authorization: `Bearer ${token}`, 
             },
@@ -73,7 +73,6 @@ const getUserData = async (token: string) => {
         throw new Error(error.response?.data?.error || "Failed to get user data");
     }
 };
-
 
 export default {
     register,
