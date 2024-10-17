@@ -29,3 +29,6 @@ const connectToDB = async () => {
 }
 
 connectToDB();
+
+// Use the auth routes
+app.use('/auth', require('./routes/auth.route'));
