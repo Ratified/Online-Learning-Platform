@@ -32,3 +32,6 @@ connectToDB();
 
 // Use the auth routes
 app.use('/auth', require('./routes/auth.route'));
+
+// Use the course routes
+app.use('/courses', require('./routes/course.route'));
