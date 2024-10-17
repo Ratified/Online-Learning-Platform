@@ -4,6 +4,9 @@ import Login from "./components/Login"
 import Home from "./pages/Home"
 import About from "./pages/About"
 
+import './css/reset.css'
+import './css/main.css'
+
 const App = () => {
   return (
     <div>

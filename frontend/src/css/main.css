@@ -1,0 +1,15 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__links{
+    display: flex;
+    gap: 1rem;
+    
+}
